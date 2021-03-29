@@ -7,12 +7,18 @@
 <script>
 	function hiddenNav() {
 		var menu = document.getElementById("topNav");
+		var blurBG = document.getElementById("blur");
 		if (menu.className === "top-nav") {
 			menu.className += " responsive";
+			blurBG.className += " responsive";
 
 		} else {
 			menu.className = "top-nav-collaspe";
-			setTimeout(() => { menu.className = "top-nav"; }, 500);
+			blurBG.className = "parallax-blur-collaspe";
+			setTimeout(function() {
+				menu.className = "top-nav";
+				blurBG.className = "parallax-blur";
+			    }, 500);
 		}	
 	}
 	</script>
@@ -39,14 +45,36 @@
 		from {opacity: 0%; top: 5%;}
 		to {opacity: 100%; top: 40%;}
 		}
+	@keyframes margin-expand {
+		from {margin-top: -66px;}
+		to {margin-top: -200px;}
+		}
+	@keyframes margin-collaspe {
+		from {margin-top: -200px;}
+		to {margin-top: -65px;}
+		}
 
 	.parallax-blur {
-	  	background-image: url("images/blured.jpg");
-		background-size: cover;
 		margin-top: -65px;
-		min-height: 100%;
 
 	}
+	.parallax-blur.responsive {
+		animation-name: margin-expand;
+  		animation-duration: 0.5s;
+		margin-top: -200px;
+	}
+	.parallax-blur-collaspe {
+		animation-name: margin-collaspe;
+  		animation-duration: 0.5s;
+		margin-top: -65px;
+	
+	}
+	.parallax-blur, .parallax-blur-collaspe, .parallax-blur.responsive {
+		background-image: url("images/blured.jpg");
+		background-size: cover;
+		min-height: 100%; 
+	}
+	
 	.top-nav , .top-nav-collaspe{
 		padding: 10px;
 		overflow: hidden;
@@ -122,7 +150,7 @@
 	  /* Set a specific height */
 	  	min-height: 100%;
 	}
-	.parallax-blur, .parallax-norm {
+	.parallax-blur, .parallax-norm, .parallax-blur.responsive, .parallax-blur-collaspe {
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -149,12 +177,12 @@
 		<a href="index.html">About</a>
 		<a href="javascript:void(0);" class="icon" onclick="hiddenNav()"><i class="fa fa-bars"></i></a>
 	</div>
-<div class="parallax-blur">
+<div class="parallax-blur" id="blur">
 	<span class="top-text">Who am I?
 	</span>	
 </div>
 <div class="body-text">
-Test Test
+<p>Biography is supposed to go here. When I feel like adding it in.</p>
 </div>
 <div class="parallax-norm"></div>
 	
