@@ -1,0 +1,143 @@
+	body, html {
+		height: 100%;
+		margin: 0;
+		}
+	.icon {
+		margin-right: 15px;
+		display: none;
+	}
+	@keyframes top-nav-expand {
+		from {height: 11.5px; display: none}
+		to {height: 45px; display: block}
+}
+	@keyframes top-nav-collaspe {
+		from {height: 180px; display: block}
+		to {height: 45px; display: none}
+			}
+		
+	@keyframes top-text-show {
+		from {opacity: 0%; top: 5%;}
+		to {opacity: 100%; top: 40%;}
+		}
+	@keyframes margin-expand {
+		from {margin-top: -66px;}
+		to {margin-top: -200px;}
+		}
+	@keyframes margin-collaspe {
+		from {margin-top: -200px;}
+		to {margin-top: -65px;}
+		}
+
+	.parallax-blur {
+		margin-top: -65px;
+
+	}
+	.parallax-blur.responsive {
+		animation-name: margin-expand;
+  		animation-duration: 0.5s;
+		margin-top: -200px;
+	}
+	.parallax-blur-collaspe {
+		animation-name: margin-collaspe;
+  		animation-duration: 0.5s;
+		margin-top: -65px;
+	
+	}
+	.parallax-blur, .parallax-blur-collaspe, .parallax-blur.responsive {
+		background-image: url("/images/blured.jpg");
+		background-size: cover;
+		min-height: 100%; 
+	}
+	
+	.top-nav , .top-nav-collaspe{
+		padding: 10px;
+		overflow: hidden;
+		background-color: rgba(0,0,0,0.3);
+		position: relative;
+		text-align: right;
+		font-size: 30px;
+		border: none;
+		z-index: 100;
+	}
+
+@media screen and (max-width: 600px) {
+	  .top-nav a:not(:first-child) , .top-nav-collaspe a:not(:first-child) {
+		display: none;
+	}
+	  .top-nav a.icon , .top-nav-collaspe a.icon{
+		float: right;
+		display: block;
+	  }
+	
+
+}
+@media screen and (max-width: 600px) {
+  .top-nav.responsive {
+	position: relative;
+	}
+  .top-nav.responsive a.icon {
+    position: absolute;
+	color: red;
+	padding: 10px;
+    right: 0;
+    top: 0;
+  }
+  .top-nav.responsive a {
+    animation-name: top-nav-expand;
+  	animation-duration: 0.5s;
+	float: none;
+    display: block;
+    text-align: left;
+
+  }
+}
+	.top-nav a, .top-nav-collaspe a {
+		color: white;
+		margin-right: 15px;
+		text-decoration: none;
+		font-family: 'Kanit', sans-serif;
+		font-weight: 100;
+	}
+	.top-nav-collaspe {
+		animation-name: top-nav-collaspe;
+  		animation-duration: 0.5s;
+	}
+	
+
+	.top-text {
+		animation: top-text-show 0.75s ease-in-out;
+		position: absolute;
+		text-align: center;
+		top: 40%;
+		width: 100%;
+		font-size: 100px;
+		color: white;
+		font-family: 'Kanit', sans-serif;
+		text-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+		
+		
+	}
+	.parallax-norm {
+	  /* The image used */
+	  	background-image: url("/images/DSC04945.jpg");
+
+	  /* Set a specific height */
+	  	min-height: 100%;
+	}
+	.parallax-blur, .parallax-norm, .parallax-blur.responsive, .parallax-blur-collaspe {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		-webkit-box-shadow: inset 10px 10px 12px 1px rgba(0,0,0,0.2);
+		-moz-box-shadow: inset 10px 10px 12px 1px rgba(0,0,0,0.2);
+		box-shadow: inset 10px 10px 12px 1px rgba(0,0,0,0.2);
+		pointer-events: none;
+		user-select: none;
+	}
+	.body-text {
+		margin: 100px;
+		margin-top: 0px;
+		font-family: 'Kanit', sans-serif;
+		font-weight:300;
+	}
