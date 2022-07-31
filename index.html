@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 <!-- Primary Meta Tags -->
 <title>Jarukrit Sripaploen Personal Site</title>
 <meta name="title" content="Jarukrit Sripaploen's Personal Site">
@@ -32,34 +35,96 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-<script src="js/index.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-04P4L35BLS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-04P4L35BLS');
-</script>
+<link rel="stylesheet" type="text/css" href="static/index.css">
 </head>
 <body>
-	<div class="top-nav" id="topNav">
-		<a href="index.html" class="nav-shown">Home</a>
-		<a href="index.html">Some place</a>
-		<a href="index.html">Contact</a>
-		<a href="index.html">About</a>
-		<a href="javascript:void(0);" class="icon" onclick="hiddenNav()"><i class="fa fa-bars"></i></a>
-	</div>
-<div class="parallax-blur" id="blur">
-	<span class="top-text">Who am I?
-	</span>	
+<!-- Stylesheets for cards -->
+<link rel="stylesheet" href="static/css/cards.css" />
+<div class="flex-seal">
+	<div class="row">
+        <div class="col no-padding d-flex align-middle" id="card_item">
+            <div class="card-social-handle">
+                <div class="card">
+                    <div class="container no-padding">
+                        <div class="grid">
+                            <div class="">
+                                <table class="card-seperator">
+                                    <tr>
+                                        <td>
+                                            <img class="card_img" src="/static/card_sample_vert.jpg">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="">
+                                <table class="info-seperator">
+                                    <tr>
+                                        <td>
+                                            <label class="info-card-label">ชื่อ</label>
+                                            <p class="info-card-data">จารุกิตติ์</p>
+                                        </td>
+                                        <td>
+                                            <label class="info-card-label">นามสกุล</label>
+                                            <p class="info-card-data">ศรีพาเพลิน</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="info-card-label">Name</label>
+                                            <p class="info-card-data">Jarukrit</p>
+                                        </td>
+                                        <td>
+                                            <label class="info-card-label">Surname</label>
+                                            <p class="info-card-data">Sripaploen</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="info-card-label">ชื่อเล่น</label>
+                                            <p class="info-card-data">กิตติ์</p>
+                                        </td>
+                                        <td>
+                                            <label class="info-card-label">Nickname</label>
+                                            <p class="info-card-data">Krit</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label class="info-card-label">มหาวิทยาลัย</label>
+                                            <p class="info-card-data" id="university">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label class="info-card-label">คณะ/สาขา</label>
+                                            <p class="info-card-data" id="university">คณะเทคโนโลยีสารสนเทศ สาขาเทคโนโลยีสารสนเทศ</p>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td>
+                                            <label class="info-card-label">Github</label>
+                                            <p class="info-card-data"><a href="https://github.com/Krit789">Krit789</a></p>
+                                        </td>
+                                        <td>
+                                            <label class="info-card-label">Discord</label>
+                                            <p class="info-card-data"><a href="https://discord.com/users/304153677575356417">Krit789#7038</a></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-handle">
+                    <p>Hello, World👋</p><p style="font-size: large;">And also hello there!</p>
+                </div>
+            </div>
+        </div>
 </div>
-<div class="body-text">
-<p>Biography is supposed to go here. When I feel like adding it in.</p>
+    </div>
 </div>
-<div class="parallax-norm"></div>
-	
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 </html>
