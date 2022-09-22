@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/img/favicon.ico@v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+			
+	<link href="../../assets/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+
+
+		
+
+		<script src="../../assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="../../index.html" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="attempt.html#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="attempt.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="attempt.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="attempt.html#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="attempt.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it65070030 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="../../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image">
+									<p>
+										นายจารุกิตติ์ ศรีพาเพลิน
+										<small>Member since August, 2022</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="../../account.html" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="https://ejudge.it.kmitl.ac.th/account/4501/edit#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายจารุกิตติ์ ศรีพาเพลิน</p>
+							<a href="../../useronline.html"><i class="fa fa-circle text-success"></i>
+																	10																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="attempt.html#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">15:06:27</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="attempt.html#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../../course/177/leave.html">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="../../course/177.html">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="../../course/177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F177%252Fleaderboard.html">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="attempt.html#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../8100.html">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="attempt.html#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../../course/177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fquiz.html">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						Those who dare to challenge.
+						<small>May the Force be with you.</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="../../index.html"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="../8233.html"><i class="fa fa-folder-open"></i> Problem 8233</a></li>
+						<li class="active">Attempt</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h3 class="box-title">Problem 8233: Inflation</h3>
+																	<br>
+									<span class="pull-right">
+										<p class="label label-success"><span class="glyphicon glyphicon-ok"></span></p> Passed&nbsp;&nbsp;&nbsp;
+										<p class="label label-warning"><span class="glyphicon glyphicon-ok"></span></p> Passed(Quality&lt;100%)&nbsp;&nbsp;&nbsp;
+										<p class="label label-danger"><span class="glyphicon glyphicon-remove"></span></p> Not Passed&nbsp;&nbsp;&nbsp;&nbsp;
+									</span>
+																</div><!-- /.box-header -->
+								<div class="box-body table-responsive">
+									<table id="example2" class="table table-striped table-hover">
+										<thead>
+											<tr>
+												<th>Submission id</th>
+												<th>User</th>
+																							<th>Result</th>
+																							<th>Score</th>
+												<th>Status</th>
+																							<th>Timestamp</th>
+											</tr>
+										</thead>
+										<tbody>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569282">
+														1569282
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4584">
+														it65070252 ( นางสาวอรวรา หงษ์เผือก )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569282">
+														P---PPPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569282">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:14:50</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573641">
+														1573641
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4520">
+														it65070230 ( นายสมิทธิพงศ์ จูปรางค์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573641">
+														P---PP-----
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573641">23.18</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-18 16:38:40</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568529">
+														1568529
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4548">
+														it65070135 ( นายปัณณวิชญ์ ปานช้าง )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568529">
+														P----------
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568529">9.09</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 12:26:27</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568531">
+														1568531
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4590">
+														it65070110 ( นายนครินทร์ ทิพย์รัตน์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568531">
+														P----------
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568531">9.09</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 12:26:38</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569062">
+														1569062
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4617">
+														it65070059 ( นายณฏฐพล สวัสดิ์มูล )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569062">
+														P-P-PPP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569062">63.64</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 14:28:08</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569324">
+														1569324
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4528">
+														it65070187 ( นายมณฑล แก้วบริวงษ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569324">
+														P-P-PPP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569324">63.64</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:19:09</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571399">
+														1571399
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4582">
+														it65070001 ( นางสาวกชกร ครุธเวโช )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571399">
+														P-P-P-PEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571399">54.55</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-17 22:53:17</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568613">
+														1568613
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4701">
+														it65070142 ( นายพงศกร นพรัตยาภรณ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568613">
+														P----PP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568613">39.77</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 12:42:03</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569389">
+														1569389
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4576">
+														it65070211 ( นางสาวศรุตา โทรัตน์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569389">
+														P----PP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569389">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:30:10</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1577080">
+														1577080
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4573">
+														it65070109 ( นายธีระรัตน์ สุดสงวน )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1577080">
+														----PPPEE--
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1577080">27.27</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-21 19:11:20</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569407">
+														1569407
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4499">
+														it65070064 ( นายณภัทร เวชพันธุ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569407">
+														P---PPPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569407">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:35:21</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570434">
+														1570434
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4593">
+														it65070214 ( นายศิรพัชร รัตนพาไชย )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570434">
+														P---PPPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570434">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 22:30:19</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570695">
+														1570695
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4596">
+														it65070222 ( นายศุภกร สถิตย์สุข )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570695">
+														P-E--P-----
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570695">18.18</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-17 10:45:53</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575825">
+														1575825
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4527">
+														it65070226 ( นายศุภวิชญ์ ปัทมภาสสกุล )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575825">
+														P-P-PPPEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575825">59.40</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-20 17:54:29</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1574549">
+														1574549
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4498">
+														it65070171 ( นายภัทร์สรรพ์พร นครานุรักษ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1574549">
+														P---PPPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1574549">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-19 13:16:29</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570725">
+														1570725
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4509">
+														it65070084 ( นายณัฐวัตร จันโท )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570725">
+														P----P---E-
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1570725">17.35</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-17 11:32:38</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568949">
+														1568949
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4646">
+														it65070228 ( นายเศรษฐโชค ตั้งศิริวัฒนวงศ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568949">
+														P-P-PPP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568949">63.64</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 13:53:16</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571516">
+														1571516
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4579">
+														it65070088 ( นางสาวทิพย์สุกาญจน์ อาษานอก )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571516">
+														P----PPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571516">36.36</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-18 00:09:04</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568701">
+														1568701
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4696">
+														it65070133 ( นายปวเรศ ตรีเพ็ชรไพศาล )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568701">
+														P-----P----
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568701">18.18</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 12:53:51</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575360">
+														1575360
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4542">
+														it65070153 ( นายพิชญดิฏฐ์ วศินานนท์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575360">
+														P---PPP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575360">54.55</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-20 01:12:29</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573314">
+														1573314
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4604">
+														it65070254 ( นายอินทัช จิรวาณิช )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573314">
+														P-P-PPPEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573314">63.64</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-18 15:10:12</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568724">
+														1568724
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4534">
+														it65070178 ( นายภูมิไชย อุดมศิลป์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568724">
+														P---PPPEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568724">54.55</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 12:57:59</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1567957">
+														1567957
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4523">
+														it65070020 ( นายกิตติพัฒน์ เอี่ยมลือนาม )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1567957">
+														P-P-PPP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1567957">61.19</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 10:49:30</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569751">
+														1569751
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4592">
+														it65070197 ( นายรวิพล สอาดโพธิ์ทอง )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569751">
+														P----PP--PP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569751">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-16 17:25:14</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576417">
+														1576417
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4595">
+														it65070217 ( นางสาวศิโรรัตน์ นามบุญ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576417">
+														P---PPPEEEP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576417">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-21 00:01:16</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576930">
+														1576930
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/2876">
+														it62070022 ( นายคณิน เชาวณัฏ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576930">
+														P---PPPEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1576930">54.55</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-21 13:37:01</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573358">
+														1573358
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4627">
+														it65070190 ( นายมานัส ถนอมรอด )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573358">
+														P-P-PPPEEPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573358">63.64</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-18 15:18:35</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572084">
+														1572084
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4517">
+														it65070163 ( นายพีระวัฒน์ พันธ์ยนต์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572084">
+														P-P-PPPEE--
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572084">45.45</a>
+																										</td>
+												<td>
+																																										<p class="label label-danger">
+																													Not pass
+																										</p>
+												</td>
+																								<td>2022-09-18 10:44:29</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569802">
+														1569802
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4637">
+														it65070015 ( นายก้องภพ สินสังข์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569802">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569802">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 17:59:33</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569810">
+														1569810
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4501">
+														it65070030 ( นายจารุกิตติ์ ศรีพาเพลิน )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569810">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569810">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 18:03:25</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568809">
+														1568809
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4500">
+														it65070159 ( นายพีรณัฐ หมัดสอ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568809">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1568809">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 13:10:55</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569323">
+														1569323
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4598">
+														it65070219 ( นายศิลา ภักดีวงษ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569323">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569323">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:18:58</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573452">
+														1573452
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4641">
+														it65070232 ( นายสหชินเดช เกตุดี )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573452">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573452">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-18 15:38:25</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573453">
+														1573453
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4524">
+														it65070239 ( นางสาวสุชานันท์ อุ่นหมั่นกิจ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573453">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573453">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-18 15:38:34</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571156">
+														1571156
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4539">
+														it65070028 ( นายคณิศร สมศรีอักษรแสง )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571156">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1571156">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-17 18:18:22</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569370">
+														1569370
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4640">
+														it65070241 ( นางสาวสุพิชชา วิเศษเจริญ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569370">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569370">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:25:31</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572711">
+														1572711
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4632">
+														it65070221 ( นายศุภกร ทองเอียด )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572711">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572711">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-18 12:34:33</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569652">
+														1569652
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4551">
+														it65070013 ( นายก้องฟ้า วโรรส )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569652">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569652">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 16:53:28</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572743">
+														1572743
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4541">
+														it65070184 ( นายภูวิศ ตั้งถาวรสิริกุล )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572743">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1572743">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-18 12:39:00</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573589">
+														1573589
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4631">
+														it65070242 ( นายสุภัศชัย โพธิชัย )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573589">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1573589">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-18 16:10:37</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569241">
+														1569241
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4626">
+														it65070021 ( นายกิตติภณ ทัศนเปรมสิน )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569241">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1569241">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-16 15:08:39</td>
+											</tr>
+																					<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575647">
+														1575647
+													</a>
+												</td>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/account/4606">
+														it65070165 ( นายภควัฒณ์ พันธ์ุภักดีวงษ์ )
+													</a>
+												</td>
+																							<td>
+													<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575647">
+														PPPPPPPPPPP
+													</a>
+												</td>
+																							<td>
+																												<a href="https://ejudge.it.kmitl.ac.th/problem/submission/1575647">1000.00</a>
+																										</td>
+												<td>
+																																										<p class="label label-success">
+																													Pass
+																										</p>
+												</td>
+																								<td>2022-09-20 15:11:59</td>
+											</tr>
+																				</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+        	
+	<script src="../../assets/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="../../assets/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+					$(function() {
+						$("#example1").dataTable();
+						$('#example2').dataTable({
+													"aaSorting": [[ 4, "asc" ]],
+													"bPaginate": true,
+							"autoWidth": false,
+							"bSort": true,
+						});
+					});
+					</script>
+        <script src="../../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1663833987000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
