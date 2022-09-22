@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/img/favicon.ico@v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+			
+	<link href="../assets/DataTables/DataTables-1.10.15/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+
+		
+
+		<script src="../assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="../index.html" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="57.html#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="57.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="57.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="57.html#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="57.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it65070030 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image">
+									<p>
+										นายจารุกิตติ์ ศรีพาเพลิน
+										<small>Member since August, 2022</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="../account.html" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="../account/4501/edit.html#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายจารุกิตติ์ ศรีพาเพลิน</p>
+							<a href="../useronline.html"><i class="fa fa-circle text-success"></i>
+																	3																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="57.html#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">00:31:42</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="57.html#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="177/enter.html">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F177%252Fleaderboard.html">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="57.html#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../problem/8108.html">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../problem/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="57.html#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../quiz/124.html">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../quiz/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						Pre-Programming 2016 Online
+						<small>Practice makes the master.</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="../index.html"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">Course</a></li>
+						<li class="active">Pre-Programm...</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-lg-3 col-xs-6">
+							<a href="57/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem.html">
+								<div class="small-box bg-aqua">
+									<div class="inner" style="padding:20px">
+										<h3>4</h3>
+										<p>Available Problem</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-code"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="57/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fquiz.html">
+								<div class="small-box bg-blue">
+									<div class="inner" style="padding:20px">
+										<h3>0</h3>
+										<p>Available Quiz</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-document-text"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="57/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F57%252Fleaderboard.html">
+								<div class="small-box bg-yellow">
+									<div class="inner" style="padding:20px">
+										<h3>217</h3>
+										<p>Students</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-ios7-people"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="57/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F57%252Fleaderboard.html">
+								<div class="small-box bg-red">
+									<div class="inner" style="padding:20px">
+										<h3>76497</h3>
+										<p>Top Score</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-arrow-graph-up-right"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-suitcase"></i> Course Detail</h3>
+								</div>
+								<div class="box-body">
+									<p><p><strong>Welcome to Pre-Programming 2016!</strong><br />
+โครงการเตรียมความพร้อมก่อนเปิดเทอม สำหรับนักศึกษาชั้นปีที่ 1 คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ปีการศึกษา 2559</p>
+
+<hr /><strong>ข้อแนะนำ</strong><br />
+<span style="font-family:helvetica neue,helvetica,arial,tahoma,sans-serif; font-size:14px">ถ้ามีข้อสงสัยในการทำโจทย์สามารถถามได้ใน Facebook Group</span><br />
+<span style="font-family:helvetica neue,helvetica,arial,tahoma,sans-serif; font-size:14px">ถ้าสงสัยในโจทย์ ระบุชื่อข้อให้ชัดเจนว่าข้อใด</span><br />
+<span style="font-family:helvetica neue,helvetica,arial,tahoma,sans-serif; font-size:14px">ถ้าสงสัยในการส่ง/ตรวจ ระบุหมายเลข Submission ให้ชัดเจน</span><br />
+<span style="font-family:helvetica neue,helvetica,arial,tahoma,sans-serif; font-size:14px">เพื่อความสะดวกในการตรวจสอบ และช่วยเหลือ</span></p>
+								</div>
+								<div class="box-footer clearfix">
+									<div class="pull-left" style="padding-top:4px">
+																			<button type="button" class="btn btn-warning btn-sm"><i class="fa fa-exclamation"></i> This Course for invited user only.</button>
+																		</div>
+									<div class="pull-right">
+										by <a href="../account/2.html">นายธนกฤต จุลวานิช</a>
+										<br>
+										<small>
+											<em class="text-muted">9 August 2016, 14:29</em>
+										</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box box-success">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-smile"></i> Hall of Fame <small>(of all time)</small></h3>
+								</div>
+								<div class="box-body">
+									<table class="table table-nowrap table-striped table-hover" id="hall_of_fame">
+										<thead>
+										<tr>
+                                            <th width="1%"></th>
+											<th class="export">Username</th>
+											<th class="export">Name</th>
+											<th class="export">Total Score</th>
+										</tr>
+										</thead>
+										<tbody>
+                                        																					                                                												<tr>
+                                                    <td>
+                                                                                                                    <i class="fa fa-2x fa-trophy" style="color: gold;"></i>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/958.html">
+															pre59070170
+														</a>
+													</td>
+													<td>นายนพณัฐ พลอยวงศ์</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                                                                                    <i class="fa fa-2x fa-trophy" style="color: silver;"></i>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/957.html">
+															pre59070169
+														</a>
+													</td>
+													<td>นายกวิน เรืองประทีปแสง</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                                                                                    <i class="fa fa-2x fa-trophy" style="color: #cd7f32;"></i>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/848.html">
+															pre59070062
+														</a>
+													</td>
+													<td>นายรัตนฉัตร สุขสัมผัส</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/913.html">
+															pre59070126
+														</a>
+													</td>
+													<td>นายนพรุจ แซ่ลิ้ม</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/966.html">
+															pre59070177
+														</a>
+													</td>
+													<td>นายภาณุเดช สุคนธสุโชติ</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/969.html">
+															pre59070180
+														</a>
+													</td>
+													<td>นายกิตติบุญ สัตบุษ</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/862.html">
+															pre59070076
+														</a>
+													</td>
+													<td>นายศุภเสกข์ หมั่นมุ่งกิจ</td>
+																											<td >76497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/889.html">
+															pre59070103
+														</a>
+													</td>
+													<td>นายเมธัส จารุแสงไพโรจน์</td>
+																											<td >73397</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/849.html">
+															pre59070063
+														</a>
+													</td>
+													<td>นายสัมฤทธิ์ กลิ่นกันหา</td>
+																											<td >72497</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/982.html">
+															pre59070183
+														</a>
+													</td>
+													<td>นายนาวิน พูลสวัสด์</td>
+																											<td >71974.78</td>
+													
+												</tr>
+																																                                                												<tr>
+                                                    <td>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/951.html">
+															pre59070163
+														</a>
+													</td>
+													<td>นางสาวอณรรฆวี วงศ์วัฒนอนันต์</td>
+																											<td >71875.57</td>
+													
+												</tr>
+																																																																																																																																																																																																																												</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="box box-danger">
+								<div class="box-header">
+									<h3 class="box-title">
+                                        <i class="fa fa-frown"></i> Hall of Shame <small>Weekly</small>
+                                        <i class="fa fa-info-circle" title="For those who are too lazy to test code before submit&#013;Error: ['Indentation', 'Name', 'Syntax', 'UnboundLocal']"></i>
+                                    </h3>
+								</div>
+								<div class="box-body">
+									<table class="table table-nowrap table-striped table-hover leaderboard" id="hall_of_shame">
+										<thead>
+											<th style="width: 1%"></th>
+                                            <th>Username</th>
+                                            <th>Name</th>
+											<th>SP <small><i class="fa fa-info-circle" title="Shame Point&#013;Number of Error Submission of the week&#013;Error: ['Indentation', 'Name', 'Syntax', 'UnboundLocal']"></i></small></th>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<section class="col-md-8">
+							<div class="box box-info">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-comments"></i> Announcement</h3>
+																	</div>
+																<div class="box-body chat" style="max-height: 27em;overflow-y: auto;">
+																											<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5 June 2016, 21:59 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>Pre-Programming 2016 Online Week 6</strong>
+											<br>
+											โมชิๆ สัปดาห์นี้ก็จะเป็นสัปดาห์สุดท้ายสำหรับเนื้อหาในรอบ Online แล้วนะครับ ในเรื่องสุดท้ายนี้เราจะมาเรียนกันในเรื่อง Recursion ครับ ซึ่งเรื่องนี้เป็นเรื่องที่ยากที่สุดเลยก็ว่าได้ สำหรับพี่ 55555+ ไม่อยากหรอกครับน้อง สู้ๆนะครับ ทุกคน ตั้งใจทำโจทย์กันด้วยนะครับ
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!655&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!AKdN4qh5AQ2VS2Y" target="_blank"><i class="fa fa-external-link"></i> Lesson 6: Recursion</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/?fref=ts" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 30 May 2016, 00:05 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>Pre-Programming 2016 Online Week 5</strong>
+											<br>
+											โอฮายโย ครับน้องๆ ในสัปดาห์นี้ก็เป็นสัปดาห์ที่ 5 ในการเรียนรอบ Online แล้วนะครับ เหลืออีกแค่ 2 สัปดาห์เองน้าาาาา ในสัปดาห์นี้เราก็จะมาเรียนในเรื่อง Function นะครับ และในสัปดาห์นี้ก็จะมีเนื้อหาเพิ่มเติมสำหรับน้องๆ ที่อาจจะพึ่งเข้ามาใหม่หรือมีปัญหาการเรียนแล้วไม่เข้าใจ ก็สามารถดูได้ในเนื้อหาที่ชื่อว่า &quot;Step to Programming&quot; ได้นะครับ<br><br>ถ้ามีปัญหาสงสัยตรงไหน สามารถสอบถามพี่ๆได้ที่กลุ่มนะครับ
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!643&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!AMz42a9DGa6Gg-g" target="_blank"><i class="fa fa-external-link"></i> Lesson 5: Function</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!645&amp;ithint=file%2cdocx&amp;app=Word&amp;authkey=!ANY2U8imFVH1oPs" target="_blank"><i class="fa fa-external-link"></i> Step to Programming</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/?fref=ts" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 23 May 2016, 00:33 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>Pre-Programming 2016 Online Week 4</strong>
+											<br>
+											โมชิๆ นะครับน้องๆ ในสัปดาห์นี้เราจะมาเรียนเรื่อง Array &amp; String นะครับ พี่อยากให้น้องๆลองทำความเข้าใจดีๆนะครับ เพราะเรื่องนี้มันจะยากและละเอียดครับ (งานละเอียดไม่ใช่งานหยาบ) ตั้งใจกันด้วยเน้อออออ สู้ๆ<br><br>ถ้ามีปัญหาอะไรสอบถามพี่ๆในกลุ่ม Facebook ได้นะครับ
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!641&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!AFYIGYeBMdhP51c" target="_blank"><i class="fa fa-external-link"></i> Lesson 4: Array &amp; String</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/?fref=ts" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 15 May 2016, 22:47 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>Pre-Programming 2016 Online Week 3 </strong>
+											<br>
+											โมชิๆ ครับน้องๆ ในสัปดาห์นี้เราก็จะมาเรียนในเรื่องของ Loop นะครับผม ซึ่งเรื่องนี้จะไม่เป็นเรื่องที่ยากครับถ้าน้องตั้งใจ พี่ๆขอให้น้องๆตั้งใจนะครับ ทำโจทย์ด้วยตัวเองด้วยน้าาาาาาา<br><br>ปล. น้องๆอย่าลืมลง Patch ของ Raptor ด้วยนะครับ เพื่อแก้ให้ทางเลือกของ Loop เหมือนในเอกสารครับ (เผื่องง) ก็คือ ถ้าตรงเงื่อนไขให้ทำ Loop ถ้าไม่ก็ออก Loop<br><br>ถ้ามีปัญหาอะไรสอบถามพี่ๆในกลุ่ม Facebook ได้นะครับ ^^
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!639&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!ACBy3XV9WyNlr8E" target="_blank"><i class="fa fa-external-link"></i> Lesson 3: Loop</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="../privatefiles/raptor-patch-loop-condition.zip" target="_blank"><i class="fa fa-external-link"></i> Raptor - PATCH</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/?fref=ts" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 9 May 2016, 11:39 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>Pre-Programming 2016 Online Week 2</strong>
+											<br>
+											สวัสดีครับน้องๆ ในสัปดาห์นี้เราก็จะมาเรียนในเรื่องการใช้เงื่อนไข (if...else) เรื่องนี้จะยากขึ้นมาอีก 1 ระดับนะครับ ตั้งใจเรียน ตั้งใจทำโจทย์กันด้วยน้าาาา ถ้ามีปัญหาอะไรสอบถามพี่ๆในกลุ่ม Facebook ได้นะครับ ^^
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!637&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!AI8c6bFe655ovsw" target="_blank"><i class="fa fa-external-link"></i> Lesson 2: Selection Control Statement</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 1 May 2016, 22:16 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/622.html" class="name">
+												นายวิรุฬพงศ์ ใจงามเลิศวงศ์
+											</a>
+
+											<strong>ยินดีต้อนรับสู่ Pre-Programming 2016 Online</strong>
+											<br>
+											ยินดีต้อนรับน้องๆ ทุกคนนะครับ สำหรับในสัปดาห์นี้เราจะมาเรียนกันในเรื่อง I/O ตัวแปร และการดำเนินการตัวแปรครับ โดยจะมีเอกสารประกอบการเรียนตามแนบไว้ข้างล่างนะครับ และจะมีโจทย์ให้ทำใน Ejudge ครับ น้องๆ มีข้อสงสัยตรงไหนสามารถสอบถามพี่ๆ ได้ที่กลุ่ม Facebook นะครับ
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!628&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!APUqtV-FWY0knBc" target="_blank"><i class="fa fa-external-link"></i> Introduction</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://onedrive.live.com/view.aspx?resid=379AD0D3C5AEE0F2!629&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!ADShbgr2USq-u1U" target="_blank"><i class="fa fa-external-link"></i> Lesson 1: Variable &amp; Input Output</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="https://www.facebook.com/groups/1140263599358772/?fref=ts" target="_blank"><i class="fa fa-external-link"></i> Facebook Group</a>
+											</h4>
+										</div>
+																													</div>
+																																				<div class="item">
+										<img src="../uploads/A20.gif" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 27 April 2016, 20:37 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/2.html" class="name">
+												นายธนกฤต จุลวานิช
+											</a>
+
+											<strong>Download RAPTOR</strong>
+											<br>
+											น้องๆ สามารถ Download RAPTOR เพื่อใช้ในการเรียนได้ที่นี่ <br>เมื่อทำการติดตั้งโปรแกรมเสร็จแล้ว ให้น้องๆ ทำการ Download Patch แตกไฟล์ แล้ว Double Click ไฟล์ raptor-patch-loop-condition.reg เพื่อติดตั้ง (กด Yes แล้ว OK) โดย Patch นี้จะเป็นตัวปรับทางออกของ Loop ให้น้องไม่สับสนเวลาไปเรียนภาษาอื่นๆ ครับ 
+										</p>
+																														<div class="attachment simple">
+											<h4>
+												<a href="http://raptor.martincarlisle.com/raptor_2014.msi" target="_blank"><i class="fa fa-external-link"></i> RAPTOR Installer</a>
+											</h4>
+										</div>
+																				<div class="attachment simple">
+											<h4>
+												<a href="../privatefiles/raptor-patch-loop-condition.zip" target="_blank"><i class="fa fa-external-link"></i> RAPTOR Patch</a>
+											</h4>
+										</div>
+																													</div>
+																										</div>
+															</div>
+						</section>
+						<section class="col-md-4">
+							<div class="box box-warning">
+								<div class="box-header">
+									<div class="box-title"><i class="fa fa-bookmark"></i> Instructor</div>
+								</div>
+								<div class="box-body" style="max-height: 27em;overflow-y: auto;">
+									<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/A20.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/2.html">นายธนกฤต จุลวานิช</a></p>
+											<p><span class="label label-god">Owner</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/6_1409632864_9QdE2h3n.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/6.html">Chotipat Pornavalai</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/2704_1591806690_6l00PkcW.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/2704.html">นายณัฐวัฒน์ ชวนิช</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/3266_1623908000_Y6kSWVGo.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/3266.html">นายธนวัฒน์ จันต๊ะวงค์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/13.html">นายธีรโชติ จิวะรังสินี</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/415_1437275241_rkoaNZI0.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/415.html">นายวิรุฬพงศ์ ใจงามเลิศวงศ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/604_1443579311_HSXhKBFe.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/604.html">นายมารุต มะลูลีม</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/605.html">นายศิริชัย บินชัย</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/609_1461780054_vggoy5sn.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/609.html">นายฉัตรชัย วงศ์เดชสกุล</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/613_1463492044_OS5W45GX.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/613.html">นายพัทธดนย์ เบ้าเงิน</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/619_1446461409_j3rg46WF.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/619.html">นายวรัญชิต เนตรกระจ่างกุล</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/622_1438766449_swRlZjbL.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/622.html">นายวิรุฬพงศ์ ใจงามเลิศวงศ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/628_1473346753_ECWEu81n.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/628.html">นายนัฐชพงศ์ บุรีเทศน์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/653_1462115978_nShfogoV.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/653.html">นายพัชรพล จอกสมุทร</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/671_1462465242_Qj5XPsrm.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/671.html">นายพงศกร เขมานิฏฐาไท</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/717.html">นายหรรษธร ช่วยอ่อน</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/725_1443771405_zhAJH5iw.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/725.html">นายธง รักษาวงศ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/730.html">นายคุณัชญ์ เลิศจินดาทรัพย์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/739_1466164330_oSlFFqLg.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/739.html">นายทวีวงศ์ โตเจริญ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/740_1473573494_pjiX7Ena.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/740.html">นายชนกนันท์ เสงี่ยมใจ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/745.html">นายธรรมธร เดือนดาว</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/23.html">นายธนกฤต จุลวานิช</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																	</div>
+							</div>
+						</section>
+					</div>
+					
+				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+        	
+	<script src="../assets/DataTables/DataTables-1.10.15/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="../assets/DataTables/DataTables-1.10.15/js/dataTables.bootstrap.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$('.link').on('click', '.link-remove', function(event) {
+			var temp = '';
+			if($(".link-data").length == 1)
+			{
+				temp = $('.link-data').first();
+			}
+			event.preventDefault();
+			$(this).closest('.link-data').remove();
+			temp.appendTo('.link');
+		});
+		$('.link-add').click(function () {
+			$('.link-data').first().clone().appendTo('.link');
+		});
+
+        $('#hall_of_shame').dataTable({
+			"dom": "<'row'<'col-sm-12'tr>>",
+            "searching": false,
+            "ordering": false,
+            "ajax": 'https://ejudge.it.kmitl.ac.th/course/57/hall_of_shame',
+            columnDefs: [
+                {
+                    targets: 0,
+                    data: "fullname",
+                    defaultContent: "",
+					render: function( data, type, row, meta ){
+                        var icon = ["fa-frown text-danger", "fa-meh text-orange", "fa-meh text-yellow"];
+                        if(meta.row<3){
+                            return "<i class='fa fa-2x "+icon[meta.row]+"'></i>"
+						}
+					}
+				},
+                {
+                    targets: 1,
+                    data: "username",
+                    defaultContent: "",
+                    render: function( data, type, row, meta ){
+                        var html = '<a target="_blank" href="../account/replace_here.html">'+data+'</a>'
+                        html = html.replace('replace_here', row.user_id);
+                        return html;
+                    }
+                },
+                {
+                    targets: 2,
+					data: "fullname",
+                    defaultContent: "",
+                    render: function( data, type, row, meta ){
+                        return data;
+                    }
+                },
+                {
+                    targets: 3,
+					data: "c",
+                    defaultContent: "",
+                },
+            ]
+        });
+        $('#hall_of_fame').dataTable({
+            "dom": "<'row'<'col-sm-12'tr>>",
+            "searching": false,
+            "ordering": false,
+        });
+	</script>
+        <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1663867902000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>

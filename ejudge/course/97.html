@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/img/favicon.ico@v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+			
+	<link href="../assets/DataTables/DataTables-1.10.15/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+
+		
+
+		<script src="../assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="../index.html" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="97.html#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="97.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="97.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="97.html#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="97.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it65070030 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image">
+									<p>
+										นายจารุกิตติ์ ศรีพาเพลิน
+										<small>Member since August, 2022</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="../account.html" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="../account/4501/edit.html#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายจารุกิตติ์ ศรีพาเพลิน</p>
+							<a href="../useronline.html"><i class="fa fa-circle text-success"></i>
+																	3																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="97.html#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">00:31:43</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="97.html#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="177/enter.html">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F177%252Fleaderboard.html">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="97.html#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../problem/8108.html">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../problem/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="97.html#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../quiz/124.html">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../quiz/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						Pre-Programming 2018 Playground
+						<small>Practice makes the master.</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="../index.html"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">Course</a></li>
+						<li class="active">Pre-Programm...</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-lg-3 col-xs-6">
+							<a href="97/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem.html">
+								<div class="small-box bg-aqua">
+									<div class="inner" style="padding:20px">
+										<h3>300</h3>
+										<p>Available Problem</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-code"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="97/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fquiz.html">
+								<div class="small-box bg-blue">
+									<div class="inner" style="padding:20px">
+										<h3>0</h3>
+										<p>Available Quiz</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-document-text"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="97/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F97%252Fleaderboard.html">
+								<div class="small-box bg-yellow">
+									<div class="inner" style="padding:20px">
+										<h3>9</h3>
+										<p>Students</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-ios7-people"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-xs-6">
+							<a href="97/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F97%252Fleaderboard.html">
+								<div class="small-box bg-red">
+									<div class="inner" style="padding:20px">
+										<h3>7581.67</h3>
+										<p>Top Score</p>
+									</div>
+									<div class="icon" style="right:20px">
+										<i class="ion ion-arrow-graph-up-right"></i>
+									</div>
+									<div class="small-box-footer">
+										More info <i class="fa fa-arrow-circle-right"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-suitcase"></i> Course Detail</h3>
+								</div>
+								<div class="box-body">
+									<p>Pre-Programming 2018 Playground</p>
+								</div>
+								<div class="box-footer clearfix">
+									<div class="pull-left" style="padding-top:4px">
+																			<button type="button" class="btn btn-warning btn-sm"><i class="fa fa-exclamation"></i> This Course for invited user only.</button>
+																		</div>
+									<div class="pull-right">
+										by <a href="../account/2.html">นายธนกฤต จุลวานิช</a>
+										<br>
+										<small>
+											<em class="text-muted">7 August 2019, 11:51</em>
+										</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box box-success">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-smile"></i> Hall of Fame <small>(of all time)</small></h3>
+								</div>
+								<div class="box-body">
+									<table class="table table-nowrap table-striped table-hover" id="hall_of_fame">
+										<thead>
+										<tr>
+                                            <th width="1%"></th>
+											<th class="export">Username</th>
+											<th class="export">Name</th>
+											<th class="export">Total Score</th>
+										</tr>
+										</thead>
+										<tbody>
+                                        																																																																																																																																																																																																																																																																																																																																																																																																																																				                                                												<tr>
+                                                    <td>
+                                                                                                                    <i class="fa fa-2x fa-trophy" style="color: gold;"></i>
+                                                        
+                                                    </td>
+													<td>
+														<a href="../account/1576.html">
+															it60070064
+														</a>
+													</td>
+													<td>นายพิทวัส ชูเขื้อ</td>
+																											<td >7581.67</td>
+													
+												</tr>
+																															</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="box box-danger">
+								<div class="box-header">
+									<h3 class="box-title">
+                                        <i class="fa fa-frown"></i> Hall of Shame <small>Weekly</small>
+                                        <i class="fa fa-info-circle" title="For those who are too lazy to test code before submit&#013;Error: ['Indentation', 'Name', 'Syntax', 'UnboundLocal']"></i>
+                                    </h3>
+								</div>
+								<div class="box-body">
+									<table class="table table-nowrap table-striped table-hover leaderboard" id="hall_of_shame">
+										<thead>
+											<th style="width: 1%"></th>
+                                            <th>Username</th>
+                                            <th>Name</th>
+											<th>SP <small><i class="fa fa-info-circle" title="Shame Point&#013;Number of Error Submission of the week&#013;Error: ['Indentation', 'Name', 'Syntax', 'UnboundLocal']"></i></small></th>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<section class="col-md-8">
+							<div class="box box-info">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-comments"></i> Announcement</h3>
+																	</div>
+																<div class="box-body chat" style="max-height: 27em;overflow-y: auto;">
+																											<div class="item">
+										<img src="../uploads/1510_1516255790_qx1qmkUs.jpg" class="online" alt="User Image">
+										<p class="message">
+																						<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 15 April 2018, 19:07 &nbsp;&nbsp;&nbsp;</small>
+
+											<a href="../account/1510.html" class="name">
+												นายวิพุธ ภู่ทอง
+											</a>
+
+											<strong>First Announcement</strong>
+											<br>
+											Hello world~
+										</p>
+																			</div>
+																										</div>
+															</div>
+						</section>
+						<section class="col-md-4">
+							<div class="box box-warning">
+								<div class="box-header">
+									<div class="box-title"><i class="fa fa-bookmark"></i> Instructor</div>
+								</div>
+								<div class="box-body" style="max-height: 27em;overflow-y: auto;">
+									<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/A20.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/2.html">นายธนกฤต จุลวานิช</a></p>
+											<p><span class="label label-god">Owner</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/6_1409632864_9QdE2h3n.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/6.html">Chotipat Pornavalai</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/7_1470513981_N4xJiaXA.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/7.html">นายพิชาธร เอกอุ่น</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/92_1430455968_k4we6RIM.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/92.html">นายจิรัฏฐ์ อัครสุวรรณชัย</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/569.html">Kitsuchart Pasupa</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1206.html">Nol Premasathian</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1499.html">Sirion Vittayakorn</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1505.html">Somkiat Wangsiripitak</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/2037_1535043129_oeFH3s3K.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/2037.html">นายวรเมธ งามขำ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1504.html">นายณัฎฐ์ ชูกำแพง</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1506_1523885625_JGdNfvMj.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1506.html">นายธีรภัทร ไกรศรีสิริกุล</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1510_1516255790_qx1qmkUs.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1510.html">นายวิพุธ ภู่ทอง</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1514_1530981544_PQsiffb0.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1514.html">นายพุฒิเมธ ธรรมแสง</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1522_1526770805_5hwwsMxc.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1522.html">นายฟุ้งเกียรติ เผด็จตะคุ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1546_1528385424_VBmqIMvU.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1546.html">นายศุภกิตติ์ เธียรธัญญกิจ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1550.html">นายปิยะพล เพิ่มพงศ์ไพบูลย์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1566_1610510553_nKfh1ABO.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1566.html">นายพงศธร กิตติวรปัญญา</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1583_1508301527_i6rAbGbk.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1583.html">นายรฐนนท์ จันทนะสุคนธ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1620_1528791341_2zDAGh04.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1620.html">นางสาวกวิสรา บัณเย็น</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1641_1505022732_JEunxsG3.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1641.html">นายรวิชญ์ โลหะขจรพันธ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1656_1504973466_VW1ibevv.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1656.html">นายวศิน เสริมสัมพันธ์</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1659.html">นายโชติพงษ์ แสงขุนทด</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/2032_1534826460_5BHl7Z8O.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/2032.html">นายศรัณญ์ หาญทองคำ</a></p>
+											<p><span class="label label-instructor">Instructor</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1077_1547698625_BroA0L5m.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1077.html">นายมาวิน จงไกรรัตนกุล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1501.html">นายวัชรินทร์ ศิริเกษร์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1502.html">นายธีรภัทร์ ตันธนสุทธิวงศ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1503.html">นางสาวชวัลนุช สิบหมื่นเปี่ยม</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1507_1508207989_5xlWdAgP.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1507.html">นายไทธนา อยู่มี</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1509_1504894583_cYdxQe5n.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1509.html">นายธนกฤต อินทะนิยม</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1512_1509956650_0jJ0GXHD.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1512.html">นายสาคร เสาแก้ว</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1516.html">นายธนพนธ์ วงศ์ประเสริฐ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1517.html">นายพงศภัค ภิญญาพงษ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1518_1531329474_PVtML5a2.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1518.html">นายนภนต์ ตั้งหลักมงคล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1523_1520496493_EaDPyMmT.jpeg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1523.html">นายธงเงิน แย้มประดิษฐ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1528_1534427100_9hbxEpmV.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1528.html">นายปภาวิทย์ พัทธสิริวิโชติ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1529.html">นางสาวณัฏฐณิชา ชัยศิริพานิช</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1530.html">นางสาวพิชญานิน ชูติพัฒนะ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1536_1530111951_DMuCuJcA.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1536.html">นางสาวณัฐริการ์ ศรีจันทร์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1540.html">นายกิตติเชษฐ์ ปรีดาธนะพงศ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1551.html">นายกิตติ์รวี ผาสุขโรจน์สิน</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1552_1517852533_VHqv5dp9.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1552.html">นายวีรภัทร สิทธิราช</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1553_1517728007_XlTQ4Iq3.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1553.html">นายพิพัฒน์บุญ พุทธคุณ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1554.html">นายนิติ จิรการวุฒิไกร</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1557.html">นางสาวผกายมาศ ตั้งตรงใจสกุล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1559.html">นายโศภฌ เอี่ยมเจริญ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1560.html">นายวาริน สุคันธเมศ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1561.html">นายอภิชาติ ชัยณรงค์ฤทธิ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1565_1502367258_pExzXQcd.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1565.html">นายโฆษิต โฆษิตศรีคุณากร</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1567.html">นายตฤณภัทร ปลั่งศรี</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1568_1517555924_OpOUY9cl.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1568.html">นายวัศพล พึ่งจาบ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1569_1509361304_T3k3XcIX.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1569.html">นายปริญ สิทธิกุล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1573_1624965654_arc4CSPK.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1573.html">นายกวีพล ขุนศรี</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1574.html">นายนิติพล สิริวัฒนวโรดม</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1579.html">นางสาวพัณณิตา เหมโก</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1580.html">นางสาวธิรดา ธีร์ธรรม</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1581_1541356415_oNLdVfTp.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1581.html">นายพิชญพล เพชรบุญช่วย</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1582_1509714025_bzQSyF40.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1582.html">นายภูรี กานุสนธิ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1584_1505313566_9ohzA90V.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1584.html">นายพชร ศรียอดเวียง</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1588_1526034603_xdfnmArm.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1588.html">นายพิชญุตม์ เดชหนู</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1590.html">นายพสิษฐ์ พรมราช</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1593_1517473575_xKdXMgpH.JPG" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1593.html">นางสาวมารีน่า หนูรามัญ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1599_1504453930_UW4t16hr.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1599.html">นายภานุพงศ์ เกตุรัตนกุล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1600.html">นายสิรภพ ขวัญเกื้อ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1602_1510336156_xs42o80Y.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1602.html">นายเขตโสภณ ขุนพารเพิง</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1610.html">นายชญานิน ลำยอง</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1613.html">นางสาวกัลยรัตน์ อินตา</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1614.html">นายเดชาพล เลิศสุรัตน์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1617.html">นายไชยพงษ์ นิธิพีรวัฒน์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1621_1515736445_4MzEM823.gif" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1621.html">นายจิรพัส วงษ์พิทักษ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1627.html">นายฐนกร ปานไทยกุล</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1633.html">นายศุภกฤต อภิญญาณพงศ์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1634.html">นายอัฐวุฒิ อาภรณ์รัตน์</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1638.html">นายศุภมิตร บัวศรีแก้ว</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1644.html">นายอุดมเอก ชุมทองมา</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../uploads/1650_1527517841_4Ajo5PcH.jpg" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1650.html">นายศิวกร เลิศอำนวยลาภ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1654.html">นายธนภัทร จินดาจอมทอง</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1655.html">นายกรวิชญ์ บานแย้ม</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1663.html">นายจักรกฤษณ์ สอนสนิท</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1665.html">นายภูวนัตถ์ โลกเจริญลาภ</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																		<div class="user-panel">
+										<div class="pull-left image">
+											<img src="../assets/img/avatar280.png" class="img-circle" alt="User Image">
+										</div>
+										<div class="pull-left info">
+											<p><a href="../account/1674.html">นางสาวบุษบงก์ ใจตรง</a></p>
+											<p><span class="label label-assistant">Teaching Assistant</span></p>
+										</div>
+									</div>
+																	</div>
+							</div>
+						</section>
+					</div>
+					
+				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+        	
+	<script src="../assets/DataTables/DataTables-1.10.15/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="../assets/DataTables/DataTables-1.10.15/js/dataTables.bootstrap.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$('.link').on('click', '.link-remove', function(event) {
+			var temp = '';
+			if($(".link-data").length == 1)
+			{
+				temp = $('.link-data').first();
+			}
+			event.preventDefault();
+			$(this).closest('.link-data').remove();
+			temp.appendTo('.link');
+		});
+		$('.link-add').click(function () {
+			$('.link-data').first().clone().appendTo('.link');
+		});
+
+        $('#hall_of_shame').dataTable({
+			"dom": "<'row'<'col-sm-12'tr>>",
+            "searching": false,
+            "ordering": false,
+            "ajax": 'https://ejudge.it.kmitl.ac.th/course/97/hall_of_shame',
+            columnDefs: [
+                {
+                    targets: 0,
+                    data: "fullname",
+                    defaultContent: "",
+					render: function( data, type, row, meta ){
+                        var icon = ["fa-frown text-danger", "fa-meh text-orange", "fa-meh text-yellow"];
+                        if(meta.row<3){
+                            return "<i class='fa fa-2x "+icon[meta.row]+"'></i>"
+						}
+					}
+				},
+                {
+                    targets: 1,
+                    data: "username",
+                    defaultContent: "",
+                    render: function( data, type, row, meta ){
+                        var html = '<a target="_blank" href="../account/replace_here.html">'+data+'</a>'
+                        html = html.replace('replace_here', row.user_id);
+                        return html;
+                    }
+                },
+                {
+                    targets: 2,
+					data: "fullname",
+                    defaultContent: "",
+                    render: function( data, type, row, meta ){
+                        return data;
+                    }
+                },
+                {
+                    targets: 3,
+					data: "c",
+                    defaultContent: "",
+                },
+            ]
+        });
+        $('#hall_of_fame').dataTable({
+            "dom": "<'row'<'col-sm-12'tr>>",
+            "searching": false,
+            "ordering": false,
+        });
+	</script>
+        <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1663867903000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>

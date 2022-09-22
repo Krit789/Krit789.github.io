@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/img/favicon.ico@v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		
+		
+
+		<script src="../assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="../index.html" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="31@quizPage=1&amp;problemPage=19.html#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="31@quizPage=1&amp;problemPage=19.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="31@quizPage=1&amp;problemPage=19.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="31@quizPage=1&amp;problemPage=19.html#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="31@quizPage=1&amp;problemPage=19.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it65070030 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image">
+									<p>
+										นายจารุกิตติ์ ศรีพาเพลิน
+										<small>Member since August, 2022</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="../account.html" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="4501/edit.html#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายจารุกิตติ์ ศรีพาเพลิน</p>
+							<a href="../useronline.html"><i class="fa fa-circle text-success"></i>
+																	5																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="31@quizPage=1&amp;problemPage=19.html#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">00:41:38</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="31@quizPage=1&amp;problemPage=19.html#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../course/174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="../course/177/enter.html">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="../course/177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F177%252Fleaderboard.html">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="31@quizPage=1&amp;problemPage=19.html#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../problem/8108.html">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../problem/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="31@quizPage=1&amp;problemPage=19.html#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../quiz/124.html">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../quiz/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						Profile
+						<small>Everything about this user~</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="../index.html"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="4501.html">Profile</a></li>
+						<li class="active">นางสาวพิมพ์น...</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-body" style="padding:40px 40px 15px">
+									<div class="row">
+										<div class="col-xs-3">
+											<div style="text-align:center">
+												<div style="margin-bottom:20px">
+													<img src="../assets/img/avatar280.png" class="img-responsive img-circle" style="width: 200px; height: 200px; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45); margin: 0px auto; border: 2px solid rgb(193, 193, 193)">
+												</div>
+												<span style="font-weight:bold;font-size:110%">it55070085</span>
+												<br>
+												<span style="font-weight:bold;font-size:110%">นางสาวพิมพ์นิภา เพชรแท้</span>
+																																			</div>
+										</div>
+																			<div class="col-xs-9">
+											<div class="well">
+												Write something about you...
+											</div>
+										</div>
+																		</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fa fa-tasks"></i> Enrolled Course</h3>
+								</div>
+								<div class="box-body table-responsive">
+																	<table class="table table-nowrap table-hover">
+										<thead>
+											<tr>
+												<th>Course</th>
+												<th>Enrolled at</th>
+												<th>Expire</th>
+												<th>Owner</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+																				<tr>
+												<td>
+													<a href="../course/1.html">
+														<i class="fa fa-folder-open"></i>
+														Introduction to Python Programming (Private Course)
+													</a>
+													<br>
+													<small>กลยุทธ์และหลักการแก้ปัญหา การคิดแบบขั้นตอนวิธี แนวคิดและหลักการสร้างโปรแกรมคอมพิวเตอร์ด้วยภาษา Pytho...</small>
+												</td>
+												<td>19 August 2014, 11:44</td>
+												<td>31 December 2014, 23:59</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="../course/1/enter.html" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/23">
+														<i class="fa fa-folder-open"></i>
+														Python Programming for Everyone (Public Course)
+													</a>
+													<br>
+													<small>เปิดสำหรับบุคคลทั่วไปที่สนใจเรียนการเขียนโปรแกรมคอมพิวเตอร์ด้วยภาษา Python</small>
+												</td>
+												<td>8 September 2014, 23:49</td>
+												<td>25 November 2019, 06:00</td>
+												<td><a href="2.html">นายธนกฤต จุลวานิช</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/23/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/25">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Quiz 1)
+													</a>
+													<br>
+													<small></small>
+												</td>
+												<td>9 September 2014, 08:43</td>
+												<td>15 May 2014, 00:00</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/25/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="../course/27.html">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Pre-Midterm 2014)
+													</a>
+													<br>
+													<small>สอบ 8 Oct 2014, 20.00-21.00น. ประกาศผลสอบ 21:05-21.30น.</small>
+												</td>
+												<td>6 October 2014, 13:09</td>
+												<td>8 October 2014, 21:30</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="../course/27/enter.html" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/28">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Midterm 2014)
+													</a>
+													<br>
+													<small>สอบ 9 Oct 2014, 09.30-12.30น. ประกาศผลสอบ 12.35-21.00น.</small>
+												</td>
+												<td>8 October 2014, 08:44</td>
+												<td>9 October 2014, 23:00</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/28/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/29">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Quiz 2)
+													</a>
+													<br>
+													<small></small>
+												</td>
+												<td>3 November 2014, 19:54</td>
+												<td>4 November 2014, 09:00</td>
+												<td><a href="7.html">นายพิชาธร เอกอุ่น</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/29/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="../course/47.html">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Class 2015)
+													</a>
+													<br>
+													<small>PSIT 2015</small>
+												</td>
+												<td>5 August 2015, 13:40</td>
+												<td>31 December 2015, 00:00</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="../course/47/enter.html" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/52">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Midterm 2015) 
+													</a>
+													<br>
+													<small>PSIT Midterm 2015&lt;br /&gt;
+&lt;span style=&quot;font-family:helvetica neue,helvetica,arial,tahoma,sans-serif;...</small>
+												</td>
+												<td>15 September 2015, 22:03</td>
+												<td>23 October 2015, 21:00</td>
+												<td><a href="6.html">Chotipat Pornavalai</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/52/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																				<tr>
+												<td>
+													<a href="https://ejudge.it.kmitl.ac.th/course/53">
+														<i class="fa fa-folder-open"></i>
+														Problem Solving in Information Technology (Final 2015) 
+													</a>
+													<br>
+													<small></small>
+												</td>
+												<td>26 November 2015, 16:46</td>
+												<td>27 November 2015, 12:30</td>
+												<td><a href="7.html">นายพิชาธร เอกอุ่น</a></td>
+												<td>
+																										<a href="https://ejudge.it.kmitl.ac.th/course/53/enter" class="btn btn-primary btn-sm">
+														<i class="fas fa-sign-in-alt"></i> Enter
+													</a>
+																									</td>
+											</tr>
+																			</tbody>
+									</table>
+																</div>
+							</div>
+						</div>
+					</div>
+										<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h3 class="box-title"><i class="fas fa-code-branch"></i> Submissions</h3>
+								</div>
+								<div class="box-body">
+									<div class="nav-tabs-custom">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a href="31@quizPage=1&amp;problemPage=19.html#tab_problem" data-toggle="tab">
+													<i class="fa fa-code"></i>
+													Problem
+												</a>
+											</li>
+											<li>
+												<a href="31@quizPage=1&amp;problemPage=19.html#tab_quiz" data-toggle="tab">
+													<i class="fa fa-question"></i>
+													Quiz
+												</a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab_problem">
+												<table class="table table-striped table-hover">
+													<thead>
+														<tr>
+															<th>ID</th>
+															<th>Course</th>
+															<th>Problem</th>
+															<th>Rank</th>
+															<th>Status</th>
+															<th>Time</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F5798.html">
+																	5798
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F20.html">
+																	Quadrant
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F5798.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																28 August 2014, 23:25
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=20.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4661.html">
+																	4661
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F17.html">
+																	Lab_FindLetter
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4661.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																26 August 2014, 12:34
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=17.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4651.html">
+																	4651
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F18.html">
+																	Lab_Zero
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4651.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																26 August 2014, 12:30
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=18.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4457.html">
+																	4457
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F11.html">
+																	OverlapCircle
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4457.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																25 August 2014, 20:24
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=11.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4450.html">
+																	4450
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F10.html">
+																	HW_ARobot
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4450.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																25 August 2014, 20:18
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=10.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4432.html">
+																	4432
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F12.html">
+																	Lab_LeapYearV1
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F4432.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																25 August 2014, 20:00
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=12.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F3745.html">
+																	3745
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F8.html">
+																	HW_IsTriangle
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F3745.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																24 August 2014, 18:56
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=8.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F3312.html">
+																	3312
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F9.html">
+																	Robot I
+																</a>
+															</td>
+															<td>
+																<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F3312.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																24 August 2014, 01:55
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=9.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F109.html">
+																	109
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F6.html">
+																	Lab_BrickBridge
+																</a>
+															</td>
+															<td>
+																<i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F109.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																19 August 2014, 12:42
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=6.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																												<tr>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F52.html">
+																	52
+																</a>
+															</td>
+															<td>
+																<a href="../course/1.html">
+																	Introduction to Python Programming (Private Course)
+																</a>
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252F5.html">
+																	Lab_Grade
+																</a>
+															</td>
+															<td>
+																<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+															</td>
+															<td>
+																															<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%252F52.html"  class="label label-success">
+																																			Pass
+																																	</a>
+																														</td>
+															<td>
+																19 August 2014, 12:07
+															</td>
+															<td>
+																<a href="../course/1/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=31&amp;task=5.html" class="btn btn-success btn-sm">View All</a>
+															</td>
+														</tr>
+																											</tbody>
+													<tfoot>
+														<tr>
+															<td colspan="7">
+																<div class="pull-right">
+																																		<ul class="pagination">
+			<li><a href="31@quizPage=1&amp;problemPage=18.html" rel="prev">&laquo;</a></li><li><a href="31@quizPage=1&amp;problemPage=1.html">1</a></li><li><a href="31@quizPage=1&amp;problemPage=2.html">2</a></li><li class="disabled"><span>...</span></li><li><a href="31@quizPage=1&amp;problemPage=11.html">11</a></li><li><a href="31@quizPage=1&amp;problemPage=12.html">12</a></li><li><a href="31@quizPage=1&amp;problemPage=13.html">13</a></li><li><a href="31@quizPage=1&amp;problemPage=14.html">14</a></li><li><a href="31@quizPage=1&amp;problemPage=15.html">15</a></li><li><a href="31@quizPage=1&amp;problemPage=16.html">16</a></li><li><a href="31@quizPage=1&amp;problemPage=17.html">17</a></li><li><a href="31@quizPage=1&amp;problemPage=18.html">18</a></li><li class="active"><span>19</span></li><li class="disabled"><span>&raquo;</span></li>	</ul>
+
+																</div>
+															</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+											<div class="tab-pane" id="tab_quiz">
+												<table class="table table-striped table-hover">
+													<thead>
+														<tr>
+															<th>ID</th>
+															<th>Course</th>
+															<th>Quiz</th>
+															<th>Rank</th>
+															<th>Status</th>
+															<th>Time</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td colspan="6" style="font-weight: bold; font-size: 200%; text-align: center; line-height: 5; background-color: transparent; color: rgba(0, 0, 0, 0.075);">
+																Coming Soon ..?
+																<!-- too lazy to do this = A=.... -->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+														</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+                <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1663868498000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>

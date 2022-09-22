@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/img/favicon.ico@v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		
+		
+
+		<script src="../assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="../index.html" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="132.html#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="132.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="132.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="132.html#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="132.html#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it65070030 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image">
+									<p>
+										นายจารุกิตติ์ ศรีพาเพลิน
+										<small>Member since August, 2022</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="../account.html" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="../account/4501/edit.html#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../uploads/4501_1660849283_1ZFoyjC2.png" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายจารุกิตติ์ ศรีพาเพลิน</p>
+							<a href="../useronline.html"><i class="fa fa-circle text-success"></i>
+																	4																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="132.html#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">00:34:58</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="132.html#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../course/174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="../course/177/enter.html">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="../course/177/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fcourse%252F177%252Fleaderboard.html">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="132.html#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="../problem/8108.html">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="../problem/submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="132.html#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="124.html">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="submission.html">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						PSCP Week05
+						<small>Write once ruins everywhere.</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="../index.html"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="../course/174/enter@next=https%253A%252F%252Fejudge.it.kmitl.ac.th%252Fproblem%252Fsubmission%253Fuser=4329&amp;task=7811.html">Course</a></li>
+						<li><a href="../course/177/enter.html">Problem Solv...</a></li>
+						<li><a href="124.html">Quiz</a></li>
+						<li class="active">PSCP Week05</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-xs-12">
+												</div>
+					</div>
+					<div class="row">
+											<div class="col-xs-9">
+												<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">
+										<i class="fa fa-list-alt"></i> Description
+									</h4>
+								</div><!-- /.box-header -->
+								<div class="box-body">
+									<div class="box-body">
+										Week 5
+									</div>
+								</div><!-- /.box-body -->
+								<div class="box-footer clearfix">
+									<div class="pull-right">
+										by <a href="../account/6.html">Chotipat Pornavalai</a>
+										<br>
+										<small>
+											<em class="text-muted">20 September 2022, 09:17</em>
+										</small>
+									</div>
+								</div><!-- /.box-footer -->
+							</div><!-- /.box -->
+						</div>
+											<div class="col-xs-3">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="box">
+										<div class="box-header" style="padding-bottom: 0px;">
+											<h3 class="box-title"><i class="fa fa-clock-o"></i> Time Remaining</h3>
+										</div><!-- /.box-header -->
+										<div class="box-body" style="padding-top: 0px;">
+											<center>
+												<input id="firsttime" value="" type="hidden">
+												<div id="countdown">2022-10-17 23:00:00</div>
+											</center>
+										</div><!-- /.box-body -->
+									</div><!-- /.box -->
+								</div>
+							</div>
+						</div>
+										</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">
+										<i class="fa fa-list-ol"></i> Question
+									</h4>
+								</div><!-- /.box-header -->
+								<div class="box-body">
+									<div>
+										<ul class="list-inline question-tab" role="tablist">
+																																	<li>
+																							<a href="132.html#question-175" class="btn btn-default" role="tab" data-toggle="tab">
+													1
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-177" class="btn btn-default" role="tab" data-toggle="tab">
+													2
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-51" class="btn btn-default" role="tab" data-toggle="tab">
+													3
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-52" class="btn btn-default" role="tab" data-toggle="tab">
+													4
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-176" class="btn btn-default" role="tab" data-toggle="tab">
+													5
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-48" class="btn btn-default" role="tab" data-toggle="tab">
+													6
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-44" class="btn btn-default" role="tab" data-toggle="tab">
+													7
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-89" class="btn btn-default" role="tab" data-toggle="tab">
+													8
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-12" class="btn btn-default" role="tab" data-toggle="tab">
+													9
+												</a>
+											</li>
+																						<li>
+																							<a href="132.html#question-27" class="btn btn-default" role="tab" data-toggle="tab">
+													10
+												</a>
+											</li>
+																					</ul>
+									</div>
+									<br><br>
+									<form method="POST" action="https://ejudge.it.kmitl.ac.th/quiz/132/save" accept-charset="UTF-8" class="form-save"><input name="_token" type="hidden" value="5aY1ZgWH2t9rHW6d54dJTxoheiO0OyHfeJzbHBKY">
+										<div class="question-content tab-content">
+											<div class="tab-pane active" id="question-0">
+												<p style="font-size:32px;font-weight:bold;text-align:center;padding:40px;color:rgba(0, 0, 0, 0.175)">
+													Select your question!
+												</p>
+											</div>
+																						<div class="tab-pane" id="question-175">
+												<div>
+																									<span class="label label-default">1</span><br><br>
+																									<span style="background-color:rgb(245, 245, 245); font-family:helvetica neue,helvetica,arial,tahoma,sans-serif; font-size:14px">ถ้าต้องการข้ามการทำงานของโปรแกรมที่ยังเหลืออยู่ใน loop ปัจจุบัน แล้วให้ขึ้นกลับไปทำงานใน&nbsp; loop ต่อไปได้เลย จะต้องใช้ statement ใด<br />
+<textarea name="answer[175][]" cols="10" name="statement" rows="1"></textarea></span>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-177">
+												<div>
+																									<div class="label label-danger pull-right">ข้อนี้รัน Code ตรวจจริงๆนะ</div>
+																									<span class="label label-default">2</span><br><br>
+																									จงเติม code ต่อไปนี้ เพื่อให้ได้ output ออกมาเหมือนที่กำหนดไว้&nbsp;(ให้ใช้ range)<br />
+<br />
+Code:
+<div style="background-color: rgb(245, 245, 245); border-radius: 4px; border: 1px solid rgb(204, 204, 204); font-family: ">for i in&nbsp;<textarea name="answer[177][]" rows="1"></textarea>:<br />
+&nbsp;&nbsp; &nbsp; print(i)</div>
+<br />
+Output:
+<div style="background-color: rgb(245, 245, 245); border-radius: 4px; border: 1px solid rgb(204, 204, 204); font-family: ">-1<br />
+-4<br />
+-7</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-51">
+												<div>
+																									<span class="label label-default">3</span><br><br>
+																									function ที่มีการคืนค่ากลับจะเรียกว่า&nbsp;<textarea name="answer[51][]" rows="1"></textarea> function<br />
+โดยจะมี statement&nbsp;<textarea name="answer[51][]" rows="1"></textarea> ใน function นั้นเพื่อคืนค่าที่ต้องการกลับไป<br />
+<br />
+จงเติมค่าที่เหมาะสม<br />
+<br />
+&nbsp;
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-52">
+												<div>
+																									<span class="label label-default">4</span><br><br>
+																									ถ้าเขียน function x() ไว้ใน module x.py<br />และเขียน function y() ไว้ใน module y.py<br /><br />ถ้า function y() ต้องการเรียกใช้ function x() ต้องทำใช้คำสั่งหรือพิมพ์ statement<br />import&nbsp;<textarea name="answer[52][]" rows="1"></textarea><br />ไว้ใน file&nbsp;<textarea name="answer[52][]" rows="1"></textarea>.py<br /><br />&nbsp;
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-176">
+												<div>
+																									<span class="label label-default">5</span><br><br>
+																									โปรแกรมมี 3 บรรทัดด้านล่าง<br />
+x = 5<br />
+y = x<br />
+x = 7<br />
+เมื่อจบบรรทัดที่ 3 ตอนนี้ y มีค่าเท่าไร&nbsp;<textarea name="answer[176][]" cols="10" name="value" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-48">
+												<div>
+																									<span class="label label-default">6</span><br><br>
+																									ถ้าต้องการออกจาก loop ก่อนที่เงื่อนไขการวน loop นั้นยังไม่ครบตามจำนวน (for loop) หรือเงื่อนไขใน while loop ยังเป็นจริงอยู่ จะต้องใช้ statement ใด&nbsp;<br />
+<br />
+<textarea name="answer[48][]" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-44">
+												<div>
+																									<span class="label label-default">7</span><br><br>
+																									Style Guide for Python Code คือ PEP หมายเลข&nbsp;<textarea name="answer[44][]" rows="1"></textarea>&nbsp;(เติมตัวเลขในช่องว่าง)
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-89">
+												<div>
+																									<div class="label label-danger pull-right">ข้อนี้รัน Code ตรวจจริงๆนะ</div>
+																									<span class="label label-default">8</span><br><br>
+																									<div style="background-color:#f5f5f5;border-radius:4px;border:1px solid #ccc;color:#333;display:block;font-family:courier new,courier,monospace;font-size:13px;line-height:1.428571429;margin:0 0 10px;padding:9.5px;word-break:break-all;word-wrap:break-word;">&gt;&gt;&gt; i = 0<br />
+&gt;&gt;&gt; while&nbsp;<textarea name="answer[89][]" rows="1"></textarea>:<br />
+&gt;&gt;&gt; &nbsp; &nbsp;&nbsp;print(i)<br />
+&gt;&gt;&gt; &nbsp; &nbsp; i -= 1<br />
+0<br />
+-1<br />
+-2<br />
+-3<br />
+-4</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-12">
+												<div>
+																									<div class="label label-danger pull-right">ข้อนี้รัน Code ตรวจจริงๆนะ</div>
+																									<span class="label label-default">9</span><br><br>
+																									จงเติม code ต่อไปนี้ เพื่อให้ได้ output ออกมาเหมือนที่กำหนดไว้ (ให้ใช้ range)<br />
+<br />
+Code:
+<div style="background-color:#f5f5f5;border-radius:4px;border:1px solid #ccc;color:#333;display:block;font-family:courier new,courier,monospace;font-size:13px;line-height:1.428571429;margin:0 0 10px;padding:9.5px;word-break:break-all;word-wrap:break-word;">for i in&nbsp;<textarea name="answer[12][]" rows="1"></textarea>:<br />
+&nbsp;&nbsp; &nbsp; print(i)</div>
+<br />
+Output:
+<div style="background-color:#f5f5f5;border-radius:4px;border:1px solid #ccc;color:#333;display:block;font-family:courier new,courier,monospace;font-size:13px;line-height:1.428571429;margin:0 0 10px;padding:9.5px;word-break:break-all;word-wrap:break-word;">1<br />
+2<br />
+3<br />
+4<br />
+5</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-27">
+												<div>
+																									<span class="label label-default">10</span><br><br>
+																									ฟังก์ชั่นที่ไม่มีการคืนค่า ถูกเรียกว่าเป็นประเภท&nbsp;<textarea name="answer[27][]" rows="1"></textarea>&nbsp;function
+												</div>
+											</div>
+																					</div>
+									</form>
+																	</div>
+								<div class="box-footer clearfix">
+									<div class="pull-right">
+										<button type="button" class="btn btn-info btn-save">
+											<i class="fa fa-save"></i>
+											Save
+										</button>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+																				<button type="button" class="btn btn-success" disabled>
+											<i class="fa fa-send"></i>
+											Submit
+										</button>
+																			</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="submitConfirm" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-sm">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title">Confirmation</h4>
+								</div>
+								<div class="modal-body">
+									<h4>
+										Are you sure ?
+																																																									<span class="label label-danger">1</span>
+																																																	<span class="label label-danger">2</span>
+																																																	<span class="label label-danger">3</span>
+																																																	<span class="label label-danger">4</span>
+																																																	<span class="label label-danger">5</span>
+																																																	<span class="label label-danger">6</span>
+																																																	<span class="label label-danger">7</span>
+																																																	<span class="label label-danger">8</span>
+																																																	<span class="label label-danger">9</span>
+																																																	<span class="label label-danger">10</span>
+																												</h4>
+									<br>
+									<br>
+								</div>
+								<div class="modal-footer">
+									<form method="POST" action="https://ejudge.it.kmitl.ac.th/quiz/132/send" accept-charset="UTF-8" class="form-inline final-confirm"><input name="_token" type="hidden" value="5aY1ZgWH2t9rHW6d54dJTxoheiO0OyHfeJzbHBKY">
+										<button type="submit" class="btn btn-success form-submit" onclick="return confirm('Are you really sure?')">
+											<i class="fa fa-send"></i>
+											Submit
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+									</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+        					
+					<script>
+						var saveUrl = 'https://ejudge.it.kmitl.ac.th/quiz/132/send';
+						$('.btn-save').click(function () {
+							$('.form-save').submit();
+						});
+					</script>
+		<script >// set the date we're counting down to
+		var target_date = new Date("Oct 17, 2022 22:59:59").getTime();
+		// variables for time units
+		var days, hours, minutes, seconds;
+		var date = new Date(1663868098*1000).getTime();
+		document.getElementById("firsttime").value = date;
+		// get tag element
+		var countdown = document.getElementById("countdown");
+
+		// update the tag with id "countdown" every 1 second
+		setInterval(function () {
+
+			// find the amount of "seconds" between now and target
+			var current_date = parseInt(document.getElementById("firsttime").value);
+			document.getElementById("firsttime").value = current_date+1000;
+			var seconds_left = (target_date - current_date) / 1000;
+
+			// do some time calculations
+			days = parseInt(seconds_left / 86400);
+			seconds_left = seconds_left % 86400;
+
+			hours = parseInt(seconds_left / 3600);
+			seconds_left = seconds_left % 3600;
+
+			minutes = parseInt(seconds_left / 60);
+			seconds = parseInt(seconds_left % 60);
+
+			// format countdown string + set tag value
+			//countdown.innerHTML = days + "d, " + hours + "h, "+ minutes + "m, " + seconds + "s";
+			h = " Hours ";
+			m = " Minutes ";
+			s = " Seconds ";
+			if(seconds == "1" || seconds == "0"){ s = " Second "; }
+			if(minutes == "1" || minutes == "0"){ m = " Minute "; }
+			if(hours == "1" || hours == "0"){ h = " Hour "; }
+
+			if(hours==0 && minutes==0 && seconds==0)
+			{
+				countdown.innerHTML = "<h1>BOOM</h1>";
+				$('.final-confirm').submit();
+			}
+			else if(hours<=0 && minutes<=0 && seconds<=0)
+			{
+				countdown.innerHTML = "<h1>BOOM</h1>";
+			}
+			else
+			{
+				if(parseInt(seconds) < 10){
+					seconds = '0'+seconds;
+				}
+				if(parseInt(minutes) < 10){
+					minutes = '0'+minutes;
+				}
+				if(parseInt(hours) < 10){
+					hours = '0'+hours;
+				}
+				countdown.innerHTML = '<h1>'+hours +' : '+ minutes +' : '+ seconds +'</h1>';
+			}
+
+		}, 1000);
+	</script>
+	        <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1663868098000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
