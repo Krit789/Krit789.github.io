@@ -26,7 +26,7 @@
 .syntaxhighlighter textarea {
   -moz-border-radius: 0 0 0 0 !important;
   -webkit-border-radius: 0 0 0 0 !important;
-  background: none !important;
+  background-color: #272822 !important;
   border: 0 !important;
   bottom: auto !important;
   float: none !important;
@@ -37,6 +37,7 @@
   outline: 0 !important;
   overflow: visible !important;
   padding: 0 !important;
+  margin-bottom: 1.25px !important;
   position: static !important;
   right: auto !important;
   text-align: left !important;
@@ -100,6 +101,7 @@
 .syntaxhighlighter table td.gutter .line {
   text-align: right !important;
   padding: 0 0.5em 0 1em !important;
+  /* margin-top: -2px !important; */
 }
 .syntaxhighlighter table td.code .line {
   padding: 0 1em !important;
@@ -167,7 +169,8 @@
 .syntaxhighlighter.printing .line.highlighted .number,
 .syntaxhighlighter.printing .line.highlighted.alt1 .content,
 .syntaxhighlighter.printing .line.highlighted.alt2 .content {
-  background: none !important;
+  background: #272822 !important;
+  
 }
 .syntaxhighlighter.printing .line .number {
   color: #bbbbbb !important;
@@ -182,7 +185,8 @@
   text-decoration: none !important;
 }
 .syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
-  color: black !important;
+  /* color: black !important; */
+  color: #F8F8F2 !important;
 }
 .syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
   color: #008200 !important;
@@ -229,10 +233,10 @@
   background-color: white !important;
 }
 .syntaxhighlighter .line.alt1 {
-  background-color: white !important;
+  background-color: #272822 !important;
 }
 .syntaxhighlighter .line.alt2 {
-  background-color: white !important;
+  background-color: #272822 !important;
 }
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
   background-color: #e0e0e0 !important;
@@ -282,28 +286,35 @@
   color: black !important;
 }
 .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
-  color: black !important;
+  color: #F8F8F2 !important;
 }
 .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-  color: #008200 !important;
+  color: #75715E !important;
 }
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: blue !important;
+  color: #E6DB74 !important;
 }
 .syntaxhighlighter .keyword {
-  color: #006699 !important;
+  color: #F92672 !important;
 }
 .syntaxhighlighter .preprocessor {
   color: gray !important;
+}
+.syntaxhighlighter .datatypes {
+  color: #66D9EF !important;
+  font-style: italic !important;
+}
+.syntaxhighlighter .def {
+  color: #A6E22E !important;
 }
 .syntaxhighlighter .variable {
   color: #aa7700 !important;
 }
 .syntaxhighlighter .value {
-  color: #009900 !important;
+  color: #AE81FF !important;
 }
 .syntaxhighlighter .functions {
-  color: #ff1493 !important;
+  color: #66D9EF !important;
 }
 .syntaxhighlighter .constants {
   color: #0066cc !important;
@@ -314,7 +325,7 @@
   background-color: none !important;
 }
 .syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
-  color: gray !important;
+  color: #AE81FF !important;
 }
 .syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
   color: #ff1493 !important;
